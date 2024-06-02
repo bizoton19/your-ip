@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "h+X7Y4mdfu/D0Wna8HDmODcnaUrCbKJ+A20TIdrW89M=",
+  "Source": "get-ip",
+  "BasePath": "_content/get-ip",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
