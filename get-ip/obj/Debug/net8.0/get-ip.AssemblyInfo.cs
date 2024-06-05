@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("get-ip")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35101910361f054e01af8fd4bf0d4a690cee3deb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8072c5cba7acbd41290d21e40b12de5ed899f378")]
 [assembly: System.Reflection.AssemblyProductAttribute("get-ip")]
 [assembly: System.Reflection.AssemblyTitleAttribute("get-ip")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

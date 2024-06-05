@@ -31,3 +31,4 @@
 /Users/alex/OneDrive/GitHUb/you-ip-address/get-ip/obj/Debug/net8.0/get-ip.pdb
 /Users/alex/OneDrive/GitHUb/you-ip-address/get-ip/obj/Debug/net8.0/get-ip.genruntimeconfig.cache
 /Users/alex/OneDrive/GitHUb/you-ip-address/get-ip/obj/Debug/net8.0/ref/get-ip.dll
+/Users/alex/OneDrive/GitHUb/you-ip-address/get-ip/obj/Debug/net8.0/get-ip.sourcelink.json

@@ -16,6 +16,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStatusCodePages(async statusCodeContext 
+    =>  await Results.Problem(statusCode: statusCodeContext.HttpContext.Response.StatusCode)
+                 .ExecuteAsync(statusCodeContext.HttpContext));
 IPInfo GetIPInfo(HttpContext context)
 {
     var remoteIpAddress = context.Connection.RemoteIpAddress;
@@ -34,13 +37,26 @@ IPInfo GetIPInfo(HttpContext context)
 
 app.MapGet("/ip", (HttpContext context) =>
 {
+    /*if(!context.Request.Headers.ContainsKey("X-Forwarded-For")){
+      //throw new InvalidOperationException();
+      var c = new Custom(){ Message="No X-Forwarded-For header present"};
+      return Results.BadRequest<Custom>(c);
+    }*/
     var ipInfo = GetIPInfo(context);
-    return Results.Ok(ipInfo);
+    Custom c1 = new Custom() {Message = ipInfo.ForwardedIPAddress};
+    return Results.Ok<Custom>(c1);
 })
-.WithName("GetIp")
+.WithName("GetIp") 
 .WithOpenApi();
 
 app.Run();
+record Custom 
+{
+   public  IPInfo iPInfo ;
+   public string Message { get; init; } = string.Empty;
+
+
+}
 record IPInfo
 {
     public string DefaultIPAddress { get; init; } = string.Empty;
